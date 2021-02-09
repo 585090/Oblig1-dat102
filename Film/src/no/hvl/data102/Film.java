@@ -76,14 +76,4 @@ public class Film {
 		this.filmselskap = filmselskap;
 	}
 	
-	static Film[] trimTab(Film[] tab, int n) {
-		Film[] filmtab2 = new Film[n];
-		int i = 0;
-		while (i < n) {
-			filmtab2[i] = tab[i];
-			i++;
-		 }
-		 
-		 return filmtab2;
-	}
 }

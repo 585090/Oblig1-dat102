@@ -2,12 +2,14 @@ package no.hvl.data102;
 
 import no.hvl.data102.adt.FilmarkivADT;
 
-
-
 public class Filmarkiv implements FilmarkivADT{
 
 	private Film[] filmTabell;
 	private int antall;
+	
+	public Filmarkiv() {
+		
+	}
 	
 	public Filmarkiv (Film[] filmTabell, int antall) {
 		this.filmTabell = filmTabell;
@@ -31,7 +33,16 @@ public class Filmarkiv implements FilmarkivADT{
 		this.antall = antall;
 	}
 
-
+	private Film[] trimTab(Film[] tab, int n) {
+		Film[] filmtab2 = new Film[n];
+		int i = 0;
+		while (i < n) {
+			filmtab2[i] = tab[i];
+			i++;
+		 }
+		 
+		 return filmtab2;
+	}
 
 	@Override
 	public Film[] hentFilmTabell() {
@@ -73,7 +84,7 @@ public class Filmarkiv implements FilmarkivADT{
 				ant++;
 			}
 		}
-		Film.trimTab(hjelpetabell, ant);
+		trimTab(hjelpetabell, ant);
 		return hjelpetabell;
 	}
 
@@ -87,7 +98,7 @@ public class Filmarkiv implements FilmarkivADT{
 				ant++;
 				}
 			}
-		Film.trimTab(hjelpetabell, ant);
+		trimTab(hjelpetabell, ant);
 		return hjelpetabell;
 	}
 

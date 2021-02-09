@@ -8,6 +8,11 @@ public class KlientFilmArkiv {
 
 	public static void main(String[] args) {
 		
+		
+		
+		FilmarkivADT filma = new Filmarkiv();
+		Meny meny = new Meny(filma);
+
 	}
 	
 }
